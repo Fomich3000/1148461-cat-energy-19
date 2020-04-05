@@ -26,6 +26,90 @@
     </nav>
   </header>
 
+  <main>
+    <section class="nutrition-selection">
+      <h1 class="nutrition-selection__heading page-title">Подбор программы</h1>
+      <p class="nutrition-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="nutrition-selection__form nutrition-form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="nutrition-form__cat-info">
+          <h2 class="nutrition-form__heading visually-hidden">Общая информация о коте</h2>
+          <label class="nutrition-form__label nutrition-form__label--text">
+            Имя:*
+            <input type="text" class="nutrition-form__control nutrition-form__control--text" name="cat-name" value="Барсик">
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--text">
+            Вес (кг):*
+            <input type="number" class="nutrition-form__control nutrition-form__control--number" name="cat-weight" value="7">
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--text">
+            Возраст (лет):
+            <input type="number" class="nutrition-form__control nutrition-form__control--number" name="cat-age" value="7">
+          </label>
+        </div>
+        <div class="nutrition-form__nutrition-goals">
+          <h2 class="nutrition-form__heading visually-hidden">Цели программы</h2>
+          <label class="nutrition-form__label nutrition-form__label--radio">
+            <input type="radio" class="nutrition-form__control nutrition-form__control--radio" name="goal" value="slim">
+            Похудение
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--radio">
+            <input type="radio" class="nutrition-form__control nutrition-form__control--radio" name="goal" value="gain">
+            Набор массы
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--radio">
+            <input type="radio" class="nutrition-form__control nutrition-form__control--radio" name="goal" value="dont-know">
+            Не знаю (нужен ваш совет)
+          </label>
+        </div>
+        <div class="nutrition-form__owner-contacts">
+          <h2 class="nutrition-form__heading section-heading"> Контактные данные (владельца кота)</h2>
+          <label class="nutrition-form__label nutrition-form__label--email">
+            E-mail:*
+            <input type="email" class="nutrition-form__control nutrition-form__control--email" name="owner-email" value="kuklachev@gmail.com">
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--phone">
+            Телефон:*
+            <input type="tel" class="nutrition-form__control nutrition-form__control--phone" name="owner-phone" value="8 (960) 900-60-90">
+          </label>
+        </div>
+        <div class="nutrition-form__comments">
+          <h2 class="nutrition-form__heading section-heading">Комментарий</h2>
+          <textarea class="nutrition-form__control nutrition-form__control--textarea" name="cat-habits" rows="6">Расскажите о повадках своего кота</textarea>
+        </div>
+        <div class="nutrition-form__extra-options">
+          <h2 class="nutrition-form__heading section-heading">Дополнительно</h2>
+          <label class="nutrition-form__label nutrition-form__label--checkbox">
+            <input type="checkbox" class="nutrition-form__control nutrition-form__control--checkbox" name="sweetener" checked>
+            Сахарозаменитель
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--checkbox">
+            <input type="checkbox" class="nutrition-form__control nutrition-form__control--checkbox" name="water">
+            Питьевая вода
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--checkbox">
+            <input type="checkbox" class="nutrition-form__control nutrition-form__control--checkbox" name="milk">
+            Молоко
+          </label>
+          <label class="nutrition-form__label nutrition-form__label--checkbox">
+            <input type="checkbox" class="nutrition-form__control nutrition-form__control--checkbox" name="vitamins">
+            Витамины
+          </label>
+        </div>
+        <button type="submit" class="nutrition-form__control nutrition-form__control--button button">Отправить заявку</button>
+        <p class="nutrition-form__caption">* — Обязательные поля</p>
+      </form>
+    </section>
+
+    <section class="location">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <p class="location__partership-invitation">Приглашаем к сотрудничеству дилеров!</p>
+      <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585318877508!5m2!1sru!2sru"
+        width="320" height="400" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+  </main>
+
   <footer class="page-footer">
     <img class="page-footer__logo" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип с надписью Кэт Энерджи">
     <ul class="page-footer__social-icons social-icons">
