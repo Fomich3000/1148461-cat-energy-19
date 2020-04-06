@@ -1,2 +1,42 @@
 @import "variables.less";
 @import "blocks/page-header.less";
+@import "blocks/site-list.less";
+@import "blocks/intro.less";
+@import "blocks/button.less";
+@import "blocks/nutrition-types.less";
+@import "blocks/nutrition-features.less";
+@import "blocks/example.less";
+@import "blocks/slider.less";
+@import "blocks/location.less";
+@import "blocks/page-footer.less";
+@import "blocks/social-icons.less";
+@import "blocks/copyright.less";
+@import "mixins.less";
+@import "blocks/page-main.less";
+@import "blocks/nutrition-selection.less";
+@import "blocks/products-list.less";
+@import "blocks/product-item.less";
+@import "blocks/show-more.less";
+
+body {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @greyish-brown;
+  background-color: @white;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.section-heading {
+  font-size: 24px;
+  color: @black;
+  line-height: 24px;
+  font-weight: 400;
+}
