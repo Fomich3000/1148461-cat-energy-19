@@ -1,4 +1,6 @@
 .nutrition-features__title {
+  min-width: 371px;
+  min-height: 61px;
   .heading-big();
 }
 
@@ -7,6 +9,25 @@
   padding: 0;
 }
 
+.nutrition-features__item {
+  min-width: 274px;
+}
+
 .nutrition-features__description {
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+  .nutrition-features__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nutrition-features__description {
+    width: 200px;
+    min-height: 230px;
+    margin-right: 100px;
+  }
 }

@@ -1,14 +1,16 @@
 .intro {
-  width: 320px;
-  min-height: 305px;
+  min-height: 480px;
 }
 
 .intro--background-picture {
+  height: 305px;
   background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }
 
 .intro__page-title {
   .heading-big();
+  margin: 0;
   color: @white;
   line-height: 36px;
 }
@@ -17,4 +19,105 @@
   color: @white;
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.intro__nutrition-selection {
+  display: block;
+  width: 280px;
+  min-height: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    width: 768px;
+    min-height: 950px;
+  }
+
+  .intro--background-picture {
+    background-image: none;
+    background-color: @white;
+  }
+
+  .intro__page-title {
+    width: 420px;
+    padding-top: 144px;
+    padding-left: 120px;
+    .heading-big();
+    font-size: 60px;
+    color: @black;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .intro__slogan {
+    width: 284px;
+    padding-left: 120px;
+    padding-top: 33px;
+    font-size: 20px;
+    color: @black;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .intro__nutrition-selection {
+    position: absolute;
+    bottom: 365px;
+    left: 120px;
+    display: block;
+    width: 245px;
+    min-height: 52px;
+  }
+
+  .intro__can-picture {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    position: relative;
+    width: 1300px;
+    min-height: 696px;
+  }
+
+  .intro--background-picture {
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat 720px 0;
+    background-color: @white;
+  }
+
+  .intro__page-title {
+    width: 420px;
+    padding-top: 144px;
+    padding-left: 120px;
+    .heading-big();
+    font-size: 60px;
+    color: @black;
+    line-height: 60px;
+    text-transform: none;
+  }
+
+  .intro__slogan {
+    width: 284px;
+    padding-left: 120px;
+    padding-top: 33px;
+    font-size: 20px;
+    color: @black;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .intro__can-picture {
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    width: 552px;
+    height: 499px;
+  }
+
+  .intro__nutrition-selection {
+    position: absolute;
+    bottom: 270px;
+    left: 120px;
+  }
 }

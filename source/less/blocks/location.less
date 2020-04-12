@@ -1,7 +1,50 @@
 .location__partership-invitation {
+  display: inline-block;
+  width: 125px;
   .heading-small();
 }
 
 .location__address {
+  display: inline-block;
+  width: 135px;
   font-family: "Arial", sans-serif;
+}
+
+.location__map {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .location__partership-invitation {
+    width: 154px;
+  }
+
+  .location__adress {
+    width: 153px;
+  }
+
+  .location__map {
+    min-width: 767px;
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location {
+    position: relative;
+  }
+
+  .location-wrapper {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    display: flex;
+    width: 570px;
+    height: 201px;
+    background-color: @white;
+  }
+
+  .location__map {
+    min-width: 1300px;
+  }
 }

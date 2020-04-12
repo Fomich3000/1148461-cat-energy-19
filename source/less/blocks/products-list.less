@@ -2,3 +2,17 @@
   list-style: none;
   padding: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .products-list {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products-list {
+    width: 1300px;
+  }
+}
