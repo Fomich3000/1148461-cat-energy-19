@@ -1,5 +1,11 @@
 .example {
+  width: auto;
   background-color: @grey;
+}
+
+.example__wrapper {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__title {
@@ -10,7 +16,6 @@
   display: flex;
   margin-bottom: 30px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -56,4 +61,22 @@
   font-size: 14px;
   color: @black;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: auto;
+    margin: 0;
+  }
+
+  .example__wrapper {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    width: 1206px;
+  }
 }
