@@ -1,11 +1,6 @@
 .example {
-  width: auto;
+  width: 100%;
   background-color: @grey;
-}
-
-.example__wrapper {
-  width: 280px;
-  margin: 0 auto;
 }
 
 .example__title {
@@ -61,22 +56,4 @@
   font-size: 14px;
   color: @black;
   text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .example {
-    width: auto;
-    margin: 0;
-  }
-
-  .example__wrapper {
-    width: 708px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__wrapper {
-    width: 1206px;
-  }
 }

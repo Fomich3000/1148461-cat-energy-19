@@ -1,3 +1,7 @@
+.location {
+  width: 100%;
+}
+
 .location__partership-invitation {
   display: inline-block;
   width: 125px;
@@ -12,6 +16,7 @@
 
 .location__map {
   display: block;
+  width: 100%;
   padding: 0;
   border: none;
 }
@@ -26,7 +31,6 @@
   }
 
   .location__map {
-    min-width: 767px;
     height: 400px;
   }
 }
@@ -35,8 +39,7 @@
   .location {
     position: relative;
   }
-
-  .location-wrapper {
+  .location__wrapper {
     position: absolute;
     top: 100px;
     left: 50px;
@@ -44,9 +47,5 @@
     width: 570px;
     height: 201px;
     background-color: @white;
-  }
-
-  .location__map {
-    min-width: 1300px;
   }
 }

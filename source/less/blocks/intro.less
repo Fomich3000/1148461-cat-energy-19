@@ -1,9 +1,11 @@
+.intro {
+  width: 100%;
+  position: relative;
+}
+
 .intro--background-picture {
-  width: 320px;
-  min-height: 305px;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-color: @green;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center;
+  background-color: @background-green;
 }
 
 .intro__page-title {
@@ -27,7 +29,6 @@
 
 @media (min-width: @tablet-width) {
   .intro {
-    width: 768px;
     min-height: 950px;
   }
 
@@ -37,7 +38,7 @@
   }
 
   .intro__page-title {
-    width: 420px;
+    width: 600px;
     padding-top: 144px;
     padding-left: 120px;
     .heading-big();
@@ -48,7 +49,7 @@
   }
 
   .intro__slogan {
-    width: 284px;
+    width: 500px;
     padding-left: 120px;
     padding-top: 33px;
     font-size: 20px;
@@ -58,15 +59,19 @@
   }
 
   .intro__nutrition-selection {
-    position: absolute;
-    bottom: 365px;
-    left: 120px;
+    position: relative;
     display: block;
     width: 245px;
+    margin-left: 120px;
     min-height: 52px;
+    z-index: 1;
   }
 
   .intro__can-picture {
+    position: absolute;
+    z-index: 0;
+
+    display: block;
     width: 709px;
     height: 609px;
   }
@@ -75,34 +80,13 @@
 @media (min-width: @desktop-width) {
   .intro {
     position: relative;
-    width: 1300px;
     min-height: 696px;
   }
 
   .intro--background-picture {
-    background: url("../img/index-background-mobile@1x.jpg") no-repeat 720px 0;
-    background-color: @white;
-  }
-
-  .intro__page-title {
-    width: 420px;
-    padding-top: 144px;
-    padding-left: 120px;
-    .heading-big();
-    font-size: 60px;
-    color: @black;
-    line-height: 60px;
-    text-transform: none;
-  }
-
-  .intro__slogan {
-    width: 284px;
-    padding-left: 120px;
-    padding-top: 33px;
-    font-size: 20px;
-    color: @black;
-    line-height: 20px;
-    text-transform: uppercase;
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat 720px 0,
+    linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(99,167,58,1) 50%);
+    background-color: rgb(255,255,255);
   }
 
   .intro__can-picture {
@@ -111,11 +95,5 @@
     right: 250px;
     width: 552px;
     height: 499px;
-  }
-
-  .intro__nutrition-selection {
-    position: absolute;
-    bottom: 270px;
-    left: 120px;
   }
 }
