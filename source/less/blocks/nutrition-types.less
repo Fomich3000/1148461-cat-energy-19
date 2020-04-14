@@ -22,3 +22,24 @@
 .nutrition-types__catalog-link {
   .heading-small();
 }
+
+@media (min-width: @tablet-width) {
+  .nutrition-types__item {
+    width: 708px;
+    min-height: 372px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nutrition-types__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nutrition-types__item {
+    width: 570px;
+    min-height: 372px;
+
+    margin-right: 10px;
+  }
+}

@@ -1,4 +1,12 @@
 .products-list {
+  width: 100%;
   list-style: none;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

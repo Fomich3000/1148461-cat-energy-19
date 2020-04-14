@@ -1,4 +1,5 @@
 .example {
+  width: 100%;
   background-color: @grey;
 }
 
@@ -7,15 +8,28 @@
 }
 
 .example__results-list {
-  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
   padding: 0;
+  list-style: none;
 }
 
 .example__description {
+  width: 266px;
   font-family: "Arial", sans-serif;
 }
 
+.example__results-item {
+  position: relative;
+}
+
 .example__results-value {
+  box-sizing: border-box;
+  width: 124px;
+  height: 56px;
+  margin: 0;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid @border-grey;
   font-size: 24px;
   color: @black;
   text-transform: uppercase;
@@ -23,12 +37,22 @@
 }
 
 .example__results-property {
+  position: absolute;
+  top: 50px;
+  right: 16px;
+  width: 80px;
+  height: 26px;
+  margin: 0;
+  text-align: center;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+  text-transform: lowercase;
+  background-color: @grey;
 }
 
 .example__nutrition-costs {
+  width: 190px;
   font-size: 14px;
   color: @black;
   text-transform: uppercase;
