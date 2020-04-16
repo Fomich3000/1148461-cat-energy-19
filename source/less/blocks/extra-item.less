@@ -2,6 +2,14 @@
   width: auto;
 }
 
+.extra-item__name {
+  .heading-small-bold();
+}
+
+.extra-item__quanity, .extra-item__price {
+.regular-medium();
+}
+
 .extra-item__price-wrapper {
   display: flex;
   justify-content: space-between;
@@ -26,6 +34,23 @@
   .extra-item__quanity {
     width: 136px;
     text-align: right;
+  }
+
+  .extra-item__name {
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-item__quanity, .extra-item__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra-item__order-button {
+    font-size: 16px;
+    width: 633px;
+    height: 40px;
   }
 }
 
