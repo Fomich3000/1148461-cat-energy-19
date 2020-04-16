@@ -1,3 +1,26 @@
 .nutrition-selection__heading {
+  min-width: 255px;
   .heading-big();
+}
+
+.nutrition-selection__text {
+  .regular-upper-bold();
+  line-height: 18px;
+  min-width: 226px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .nutrition-selection__heading {
+    font-size: 60px;
+    line-height: 60px;
+    min-width: 426px;
+  }
+
+  .nutrition-selection__text {
+    width: 350px;
+    margin-bottom: 69px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
