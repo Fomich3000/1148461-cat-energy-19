@@ -1,9 +1,11 @@
 .intro {
-  width: 100%;
   position: relative;
+  height: 481px;
 }
 
-.intro--background-picture {
+.intro__background-picture {
+  width: 100%;
+  height: 305px;
   background: url("../img/index-background-mobile@1x.jpg") no-repeat center;
   background-color: @background-green;
 }
@@ -11,20 +13,35 @@
 .intro__page-title {
   .heading-big();
   margin: 0;
+  padding-top: 27px;
+  margin-bottom: 25px;
   color: @white;
   line-height: 36px;
+  text-align: center;
 }
 
 .intro__slogan {
+  margin-bottom: 28px;
   color: @white;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .intro__nutrition-selection {
   display: block;
+  padding-left: 72px;
+  padding-top: 11px;
   width: 280px;
   min-height: 40px;
+
+  &:hover {
+    background-color: @green-pressed;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -32,7 +49,7 @@
     min-height: 950px;
   }
 
-  .intro--background-picture {
+  .intro__background-picture {
     background-image: none;
     background-color: @white;
   }
@@ -82,7 +99,7 @@
     min-height: 696px;
   }
 
-  .intro--background-picture {
+  .intro__background-picture {
     background: url("../img/index-background-mobile@1x.jpg") no-repeat 720px 0, linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(99, 167, 58, 1) 50%);
     background-color: rgb(255, 255, 255);
   }

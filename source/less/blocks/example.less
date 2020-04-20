@@ -1,26 +1,32 @@
 .example {
   width: 100%;
   background-color: @grey;
+  margin-bottom: 28px;
 }
 
 .example__title {
+  margin: 0;
+  padding-top: 17px;
+  margin-bottom: 23px;
   .heading-big();
 }
 
 .example__results-list {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   padding: 0;
   list-style: none;
 }
 
 .example__description {
   width: 266px;
+  margin-bottom: 25px;
   font-family: "Arial", sans-serif;
 }
 
 .example__results-item {
   position: relative;
+  margin-right: 32px;
 }
 
 .example__results-value {
@@ -28,19 +34,29 @@
   width: 124px;
   height: 56px;
   margin: 0;
-  padding: 10px 10px 10px 20px;
+  padding: 0 10px;
   border: 1px solid @border-grey;
+  border-radius: 3px;
   font-size: 24px;
   color: @black;
   text-transform: uppercase;
   line-height: 24px;
+
+  &--weight {
+    padding-left: 42px;
+    padding-top: 13px;
+  }
+
+  &--time {
+    padding-left: 20px;
+    padding-top: 13px;
+  }
 }
 
 .example__results-property {
   position: absolute;
-  top: 50px;
-  right: 16px;
   width: 80px;
+  text-align: center;
   height: 26px;
   margin: 0;
   text-align: center;
@@ -49,10 +65,23 @@
   line-height: 12px;
   text-transform: lowercase;
   background-color: @grey;
+
+  &--weight {
+    top: 47px;
+    right: 23px;
+  }
+
+  &--time {
+    top: 47px;
+    right: 22px;
+}
 }
 
 .example__nutrition-costs {
   width: 190px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
   font-size: 14px;
   color: @black;
   text-transform: uppercase;

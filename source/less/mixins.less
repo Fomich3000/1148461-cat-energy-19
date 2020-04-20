@@ -1,3 +1,21 @@
+.container-mobile() {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-tablet() {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0 30px
+}
+
+.container-desktop() {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px
+}
+
 .heading-big() {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
@@ -91,4 +109,17 @@
   width: 320px;
   height: 1px;
   background-color: @border-grey;
+}
+
+.visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

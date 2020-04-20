@@ -1,9 +1,44 @@
 .social-icons {
   display: flex;
+  width: 280px;
+  height: 63px;
+  padding: 0px 70px;
   list-style: none;
-  padding: 0;
+  margin-bottom: 0;
 }
 
-.social-icons__icon {
-  margin-right: 36px;
+.social-icons__item, .social-icons__link {
+  display: block;
+  width: 30px;
+  height: 24px;
+  margin-right: 28px;
+
+  &--vk {
+    margin-right: 27px;
+  }
+
+
+  &--insta {
+    width: 28px;
+    margin-right: 27px;
+  }
+
+  &--fb {
+    width: 20px;
+  }
+}
+
+.social-icons__link {
+
+  &--vk {
+    padding: 3px 4px;
+  }
+
+  &--insta {
+    padding: 3px 5px;
+  }
+
+  &--fb {
+    padding: 2px 5px;
+  }
 }

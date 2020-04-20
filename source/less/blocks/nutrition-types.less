@@ -1,26 +1,121 @@
+.nutrition-types {
+  margin-top: 21px;
+}
+
 .nutrition-types__list {
   list-style: none;
+  margin-block-start: 0;
   padding: 0;
 }
 
 .nutrition-types__item {
+  padding: 0px 20px;
+  margin-bottom: 20px;
   width: 280px;
   min-height: 266px;
   background-color: @grey;
 }
 
 .nutrition-types__title {
+  position: relative;
+  margin: 0;
+  text-align: center;
   font-size: 24px;
   color: @black;
   text-transform: uppercase;
+
+  &--slim {
+    padding-left: 12px;
+    padding-top: 39px;
+    padding-bottom: 25px;
+  }
+
+  &--pro {
+    padding-left: 40px;
+    padding-top: 39px;
+    padding-bottom: 25px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content:"";
+    width: 50px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: @green;
+  }
+
+  &--slim::before {
+    top: 25px;
+    left: 2px;
+  }
+
+  &--pro::before {
+    top: 23px;
+    left: 2px;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content:"";
+  }
+
+  &--slim::after {
+    top: 23px;
+    left: 10px;
+    width: 35px;
+    height: 49px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: -7px;
+    width: 67px;
+    height: 28px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+  }
 }
 
 .nutrition-types__description {
   font-family: "Arial", sans-serif;
+  margin-bottom: 41px;
 }
 
 .nutrition-types__catalog-link {
+  position: relative;
   .heading-small();
+
+  &::before, &::after {
+    position: absolute;
+    top: -16px;
+    display: block;
+    content: "";
+  }
+
+  &::before {
+    width: 240px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  &::after {
+    width: 25px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  &--slim::after {
+    top: 6px;
+    left: 96px;
+  }
+
+  &--pro::after {
+    top: 6px;
+    left: 94px;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -1,10 +1,29 @@
 .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  height: 41px;
   text-decoration: none;
   color: @light-black;
 }
 
 .copyright__span {
+  display: block;
   font-size: 16px;
   font-family: "Arial", sans-serif;
   line-height: 16px;
+}
+
+.copyright__htmlacademy-logo {
+  width: 34px;
+  height: 40px;
+
+  & path {
+    fill: #666666;
+  }
+
+  &:hover path {
+    fill: @green;
+  }
 }
