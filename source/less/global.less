@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -17,6 +17,11 @@ body {
   font-family: "Oswald", "Arial", sans-serif;
   color: @light-black;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 img {

@@ -9,7 +9,7 @@
 }
 
 .nutrition-types__item {
-  padding: 0px 20px;
+  padding: 0 20px;
   margin-bottom: 20px;
   width: 280px;
   min-height: 266px;
@@ -39,7 +39,7 @@
   &::before {
     position: absolute;
     display: block;
-    content:"";
+    content: "";
     width: 50px;
     height: 51px;
     border-radius: 50%;
@@ -59,7 +59,7 @@
   &::after {
     position: absolute;
     display: block;
-    content:"";
+    content: "";
   }
 
   &--slim::after {
@@ -88,7 +88,8 @@
   position: relative;
   .heading-small();
 
-  &::before, &::after {
+  &::after,
+  &::before {
     position: absolute;
     top: -16px;
     display: block;
@@ -119,21 +120,199 @@
 }
 
 @media (min-width: @tablet-width) {
+  .nutrition-types {
+    margin-bottom: 50px;
+  }
+
   .nutrition-types__item {
     width: 708px;
     min-height: 372px;
+    padding: 0 51px;
+    margin-bottom: 28px;
+  }
+
+  .nutrition-types__title {
+    width: 163px;
+    text-align: left;
+    font-size: 37px;
+
+    &--slim {
+      padding-left: 0;
+      padding-top: 86px;
+      padding-bottom: 17px;
+    }
+
+    &--pro {
+      width: 220px;
+      padding-left: 0;
+      padding-top: 88px;
+      padding-bottom: 17px;
+    }
+
+    &::before {
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::before {
+      top: 91px;
+      left: 395px;
+    }
+
+    &--pro::before {
+      top: 91px;
+      left: 395px;
+    }
+
+    &--slim::after {
+      top: 78px;
+      left: 425px;
+      width: 141px;
+      height: 194px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      left: 361px;
+      width: 268px;
+      height: 113px;
+    }
+  }
+
+  .nutrition-types__description {
+    width: 380px;
+    margin-bottom: 57px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    &--pro {
+      width: 344px;
+    }
+  }
+
+  .nutrition-types__catalog-link {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      top: -16px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &--slim::after {
+      top: 9px;
+      left: 133px;
+    }
+
+    &--pro::after {
+      top: 7px;
+      left: 126px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .nutrition-types {
+    margin-top: -15px;
+  }
+
   .nutrition-types__list {
     display: flex;
     flex-wrap: wrap;
+    width: 1220px;
   }
 
   .nutrition-types__item {
     width: 570px;
-    min-height: 372px;
-    margin-right: 10px;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .nutrition-types__title {
+    font-size: 37px;
+    margin-bottom: 67px;
+
+    &--slim {
+      padding-left: 160px;
+      padding-top: 86px;
+      padding-bottom: 17px;
+    }
+
+    &--pro {
+      width: 389px;
+      padding-left: 162px;
+      padding-top: 87px;
+      padding-bottom: 17px;
+    }
+
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::before {
+      top: 49px;
+      left: 1px;
+    }
+
+    &--pro::before {
+      width: 100px;
+      height: 100px;
+      top: 48px;
+      left: 2px;
+    }
+
+    &--slim::after {
+      top: 42px;
+      left: 15px;
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 70px;
+      left: -17px;
+      width: 134px;
+      height: 57px;
+    }
+  }
+
+  .nutrition-types__description {
+    width: 470px;
+    margin-bottom: 31px;
+
+    &--pro {
+      width: 460px;
+    }
+  }
+
+  .nutrition-types__catalog-link {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      top: -16px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &--slim::after {
+      top: 9px;
+      left: 133px;
+    }
+
+    &--pro::after {
+      top: 7px;
+      left: 126px;
+    }
   }
 }

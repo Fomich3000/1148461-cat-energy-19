@@ -2,12 +2,13 @@
   display: flex;
   width: 280px;
   height: 63px;
-  padding: 0px 70px;
+  padding: 0 70px;
   list-style: none;
   margin-bottom: 0;
 }
 
-.social-icons__item, .social-icons__link {
+.social-icons__item,
+.social-icons__link {
   display: block;
   width: 30px;
   height: 24px;
@@ -16,7 +17,6 @@
   &--vk {
     margin-right: 27px;
   }
-
 
   &--insta {
     width: 28px;
@@ -29,7 +29,6 @@
 }
 
 .social-icons__link {
-
   &--vk {
     padding: 3px 4px;
   }
@@ -40,5 +39,69 @@
 
   &--fb {
     padding: 2px 5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons__item,
+  .social-icons__link {
+    display: block;
+    width: 35px;
+    height: 30px;
+    margin-right: 25px;
+
+    &--insta {
+      margin-right: 17px;
+    }
+
+    &--fb {
+      width: 20px;
+    }
+  }
+
+  .social-icons__item--fb {
+    margin-top: -1px;
+  }
+
+  .social-icons__link {
+    &--insta {
+      padding: 0;
+    }
+
+    &--vk {
+      padding: 4px 2px;
+    }
+
+    &--fb {
+      padding: 0;
+    }
+  }
+
+  .social-icons__icon {
+    &--vk-icon {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--instagram-icon {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook-icon {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social-icons {
+    margin-top: 17px;
+    margin-right: 199px;
   }
 }

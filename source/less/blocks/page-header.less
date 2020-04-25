@@ -8,17 +8,21 @@
   padding-top: 11px;
 
   .st0 {
-    fill: #FDC305;
+    fill: #fdc305;
   }
+
   .st1 {
-    fill: #F06351;
+    fill: #f06351;
   }
+
   .st2 {
     fill: #111111;
   }
+
   &:hover {
-      opacity: 0.8;
-    }
+    opacity: 0.8;
+  }
+
   &:active {
     opacity: 0.6;
   }
@@ -27,6 +31,7 @@
 @media (min-width: @tablet-width) {
   .page-header {
     display: flex;
+    min-height: 120px;
     justify-content: space-between;
     .container-tablet();
   }
@@ -34,10 +39,12 @@
   .page-header__logo {
     width: 174px;
     height: 59px;
-    padding-top: 30px;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+
+  .header-wrapper {
+    margin-bottom: 10px;
   }
 }
 
@@ -54,10 +61,13 @@
   .page-header__logo {
     width: 203px;
     height: 60px;
+    margin-top: 9px;
+    margin-left: -15px;
   }
 
   .header-wrapper {
     position: relative;
+    padding: 0;
     .container-desktop();
   }
 }
