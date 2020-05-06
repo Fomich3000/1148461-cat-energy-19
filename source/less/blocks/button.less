@@ -4,12 +4,28 @@
   text-transform: uppercase;
   color: @white;
   background-color: @green;
-}
 
-.button--service-button {
-  display: block;
-  width: 280px;
-  height: 40px;
-  color: @light-black;
-  background-color: @white-grey;
+  &:hover {
+    background-color: @green-hover;
+  }
+
+  &:active {
+    color: @white-click;
+  }
+
+  &--service-button {
+    display: block;
+    width: 280px;
+    height: 40px;
+    color: @light-black;
+    background-color: @white-grey;
+
+    &:hover {
+      background-color: @grey-hover;
+    }
+
+    &:active {
+      color: @grey-click;
+    }
+  }
 }

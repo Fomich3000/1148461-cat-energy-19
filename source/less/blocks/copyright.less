@@ -1,10 +1,48 @@
 .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  height: 41px;
   text-decoration: none;
   color: @light-black;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover > .copyright__htmlacademy-logo path {
+    fill: @green;
+  }
+
+  &:active > .copyright__htmlacademy-logo {
+    fill-opacity: 0.3;
+  }
 }
 
 .copyright__span {
+  display: block;
   font-size: 16px;
   font-family: "Arial", sans-serif;
   line-height: 16px;
+}
+
+.copyright__htmlacademy-logo {
+  width: 34px;
+  height: 40px;
+
+  & path {
+    fill: #666666;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+    margin-bottom: 27px;
+  }
+
+  .copyright__span {
+    margin-right: 17px;
+  }
 }

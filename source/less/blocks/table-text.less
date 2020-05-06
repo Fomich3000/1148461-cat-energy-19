@@ -1,0 +1,21 @@
+.table-text {
+  border-spacing: 0;
+}
+
+.table-text td,
+.table-text tr {
+  border: none;
+  padding: 0;
+}
+
+.table-text__cell {
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .table-text td,
+  .table-text tr {
+    border-bottom: @grey-block-underline;
+    padding: 7px 0;
+  }
+}

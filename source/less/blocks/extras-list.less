@@ -3,8 +3,18 @@
   padding: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .extras-list {
+    padding-left: 38px;
+    border: @grey-block-underline;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .extras-list {
     width: 895px;
+    padding-left: 0;
+    border-left: none;
+    border-right: none;
   }
 }
