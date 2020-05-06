@@ -73,14 +73,13 @@
 }
 
 .nutrition-form__control {
-
   &--input {
-  .inputs-bold();
-  flex-grow: 1;
-  margin-left: 14px;
-  padding-left: 13px;
-  height: 45px;
-  border: @input-border
+    .inputs-bold();
+    flex-grow: 1;
+    margin-left: 14px;
+    padding-left: 13px;
+    height: 45px;
+    border: @input-border;
   }
 
   &--input:hover {
@@ -95,12 +94,12 @@
     border: @input-border-invalid;
   }
 
-  &--weight-input,
-  &--age-input {
-  margin-left: 15px;
-  padding-top: 2px;
-  padding-left: 16px;
-}
+  &--age-input,
+  &--weight-input {
+    margin-left: 15px;
+    padding-top: 2px;
+    padding-left: 16px;
+  }
 
   &--email,
   &--phone {
@@ -109,20 +108,24 @@
   }
 
   &--textarea {
+    .inputs-bold();
+    width: 280px;
     padding-left: 14px;
     padding-top: 12px;
+    min-height: 150px;
   }
 
   &--email-icon,
   &--phone-icon {
-  position: absolute;
-  left: 247px;
-}
+    position: absolute;
+    left: 247px;
+  }
 
   &--input:active + &--email-icon path,
   &--input:active + &--phone-icon path {
     fill: @green;
   }
+
   &--input:invalid + &--email-icon path,
   &--input:invalid + &--phone-icon path {
     fill: @icon-invalid;
@@ -161,6 +164,7 @@
   &:hover::before {
     border: @radio-checkbox-hover;
   }
+
   &::after {
     position: absolute;
     left: 9px;
@@ -173,7 +177,7 @@
   }
 }
 
- .nutrition-form__control--radio:checked + .nutrition-form__label--radio::after {
+.nutrition-form__control--radio:checked + .nutrition-form__label--radio::after {
   background-color: @green;
 }
 
@@ -187,12 +191,6 @@
   min-height: 210px;
   margin-bottom: 27px;
   position: relative;
-}
-
-.nutrition-form__control--textarea {
-  .inputs-bold();
-  width: 280px;
-  min-height: 150px;
 }
 
 .nutrition-form__extra-options {
@@ -232,10 +230,9 @@
   }
 }
 
-.nutrition-form__control--checkbox:checked +.nutrition-form__label--checkbox::before {
-  background: url('../img/icon-tick.svg') no-repeat center;
+.nutrition-form__control--checkbox:checked + .nutrition-form__label--checkbox::before {
+  background: url("../img/icon-tick.svg") no-repeat center;
 }
-
 
 .nutrition-form__control--button {
   width: 280px;
@@ -245,7 +242,6 @@
   border: 0;
   font-size: 16px;
   line-height: 20px;
-
 }
 
 .nutrition-form__caption {
@@ -270,7 +266,7 @@
   }
 
   .nutrition-form__container {
-      padding: 0 70px;
+    padding: 0 70px;
   }
 
   .nutrition-form__decorative-line {
@@ -326,25 +322,24 @@
   }
 
   .nutrition-form__control {
+    &--input {
+      font-size: 20px;
+      height: 52px;
+      margin-left: 17px;
+      padding-left: 18px;
+    }
 
-  &--input {
-    font-size: 20px;
-    height: 52px;
-    margin-left: 17px;
-    padding-left: 18px;
-  }
-
-  &--input:active {
-    padding-left: 17px;
-  }
+    &--input:active {
+      padding-left: 17px;
+    }
 
     &--weight-input {
       margin-left: 22px;
     }
 
     &--email {
-    margin-left: 20px;
-    padding-left: 20px;
+      margin-left: 20px;
+      padding-left: 20px;
     }
 
     &--email:active {
@@ -362,17 +357,14 @@
 
     &--email-icon,
     &--phone-icon {
-    position: absolute;
-    left: 595px;
-  }
+      position: absolute;
+      left: 595px;
+    }
   }
 
   .nutrition-form__container-wrapper--goals {
     width: 629px;
-    padding-top: 3px;
-    padding-left: 29px;
-    padding-right: 0px;
-    padding-bottom: 30px;
+    padding: 3px 0 30px 29px;
     border: @grey-block-underline;
   }
 
@@ -382,11 +374,10 @@
     border: 0;
   }
 
-
   .nutrition-form__label--radio {
     width: auto;
     height: 40px;
-    padding: 10px 0px 0px 59px;
+    padding: 10px 0 0 59px;
     margin-top: 20px;
     margin-bottom: -9px;
 
@@ -403,10 +394,9 @@
     }
   }
 
-.nutrition-form__owner-contacts-wrapper {
-  padding: 0 70px;
-}
-
+  .nutrition-form__owner-contacts-wrapper {
+    padding: 0 70px;
+  }
 
   .nutrition-form__owner-contacts {
     margin-bottom: 88px;
@@ -439,12 +429,10 @@
     flex-wrap: wrap;
   }
 
-
   .nutrition-form__label--checkbox {
     width: 210px;
     padding-left: 58px;
     margin-bottom: 29px;
-    margin-right: 134px;
     margin-right: 80px;
 
     &:nth-child(4n) {
@@ -462,7 +450,6 @@
     display: flex;
     align-items: center;
   }
-
 
   .nutrition-form__control--button {
     width: 283px;
@@ -520,8 +507,8 @@
       background-color: @white;
     }
 
-    &--contacts,
-    &--comment {
+    &--comment,
+    &--contacts {
       top: -22px;
     }
 
@@ -547,10 +534,7 @@
 
   .nutrition-form__container-wrapper--goals {
     width: 570px;
-    padding-top: 5px;
-    padding-left: 27px;
-    padding-right: 0px;
-    padding-bottom: 32px;
+    padding: 5px 0 32px 27px;
     border: @grey-block-underline;
   }
 
@@ -564,10 +548,10 @@
   .nutrition-form__label--radio {
     width: auto;
     height: 40px;
-    padding: 10px 0px 0px 59px;
+    padding: 10px 0 0 59px;
     margin-top: 20px;
     margin-bottom: -9px;
-}
+  }
 
   .nutrition-form__label {
     width: 571px;
@@ -578,7 +562,6 @@
   }
 
   .nutrition-form__control {
-
     &--email {
       margin-left: 22px;
       padding-left: 18px;
@@ -596,17 +579,18 @@
 
     &--email-icon,
     &--phone-icon {
-    position: absolute;
-    left: 532px;
+      position: absolute;
+      left: 532px;
+    }
   }
-}
+
   .nutrition-form__control--label {
     width: 570px;
   }
 
   .nutrition-form__owner-contacts {
-  margin-bottom: 40px;
-}
+    margin-bottom: 40px;
+  }
 
   .nutrition-form__owner-contacts-wrapper {
     display: flex;
@@ -637,9 +621,7 @@
       margin-right: 0;
     }
 
-    &:last-child
-
-    &::before {
+    &:last-child &::before {
       top: -11px;
       width: 40px;
       height: 40px;
@@ -654,8 +636,8 @@
   }
 
   .nutrition-form__extra-options {
-      margin-bottom: 100px;
-    }
+    margin-bottom: 100px;
+  }
 
   .nutrition-form__extra-options-wrapper > label {
     width: 245px;

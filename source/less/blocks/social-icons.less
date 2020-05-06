@@ -43,14 +43,13 @@
 }
 
 .social-icons__icon {
+  &:hover circle,
+  &:hover path {
+    fill: @green;
+  }
 
-  &:hover path,
-  &:hover circle {
-  fill: @green;
-}
-
-  &:active path,
-  &:active circle {
+  &:active circle,
+  &:active path {
     fill-opacity: 0.3;
   }
 }
