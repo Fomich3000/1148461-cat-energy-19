@@ -1,19 +1,40 @@
 .page-main__heading {
-  width: 320px;
+  width: 280px;
   margin-bottom: 100px;
   .heading-big();
+
+  &--catalog {
+    margin-bottom: 27px;
+    padding: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-main__heading {
     width: 350px;
+    font-size: 60px;
+    line-height: 60px;
+
+    &--catalog {
+      width: 768px;
+      margin: 0 auto;
+      padding: 0 30px;
+      padding-top: 12px;
+      margin-bottom: 161px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__heading {
-    width: 600px;
     font-size: 60px;
     line-height: 60px;
+
+    &--catalog {
+      width: 1300px;
+      margin: 0 auto;
+      padding: 0 40px;
+      margin-bottom: 165px;
   }
+}
 }

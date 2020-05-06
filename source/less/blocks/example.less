@@ -4,11 +4,16 @@
   margin-bottom: 28px;
 }
 
-.example__results-wrapper,
-.example__slider-wrapper,
-.example__text-wrapper {
+.example__section-wrapper {
+  .container-reset();
+}
+
+.example__slider-wrapper {
+
   @media (max-width: @mobile-width-only) {
-    .container-reset();
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -90,7 +95,7 @@
 
 .example__nutrition-costs {
   width: 190px;
-  margin: 0 auto 40px;
+  margin: 0 auto 36px;
   text-align: center;
   font-size: 14px;
   color: @black;
@@ -100,7 +105,6 @@
     display: none;
   }
 }
-
 @media (min-width: @tablet-width) {
   .example {
     position: relative;
@@ -196,7 +200,6 @@
     }
   }
 }
-
 @media (min-width: @desktop-width) {
   .example {
     width: 100%;

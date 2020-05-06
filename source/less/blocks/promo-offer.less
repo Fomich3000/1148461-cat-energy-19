@@ -1,10 +1,29 @@
 .promo-offer {
+  position: relative;
   width: 280px;
   height: 289px;
+  margin-bottom: 33px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+
+
+  &::before {
+    position: absolute;
+    left: 113px;
+    bottom: 163px;
+    display: block;
+    content: "";
+    width: 56px;
+    height: 61px;
+    background: url('../img/icon-gift.svg') no-repeat;
+
+  }
 }
 
 .promo-offer__text {
+  margin: 0;
+  padding: 188px 28px;
+  padding-bottom: 0;
+  text-align: center;
   .regular-white();
 }
 
@@ -13,13 +32,40 @@
     width: 708px;
     height: 200px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+    margin-bottom: 75px;
+
+    &::before {
+      left: 90px;
+      bottom: 74px;
+    }
+  }
+
+  .promo-offer__text {
+    width: 600px;
+    padding-top: 72px;
+    padding-left: 393px;
+    text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo-offer {
+    .container-reset();
     width: 245px;
+    margin-top: 15px;
     height: 289px;
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+
+    &::before {
+      left: 95px;
+      bottom: 163px;
+    }
   }
+
+  .promo-offer__text {
+    width: 242px;
+    padding-left: 30px;
+    padding-top: 189px;
+    text-align: center;
+}
 }

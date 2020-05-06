@@ -6,6 +6,18 @@
   height: 41px;
   text-decoration: none;
   color: @light-black;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover > .copyright__htmlacademy-logo path {
+    fill: @green;
+  }
+
+  &:active > .copyright__htmlacademy-logo {
+    fill-opacity: 0.3;
+  }
 }
 
 .copyright__span {
@@ -21,10 +33,6 @@
 
   & path {
     fill: #666666;
-  }
-
-  &:hover path {
-    fill: @green;
   }
 }
 

@@ -42,6 +42,19 @@
   }
 }
 
+.social-icons__icon {
+
+  &:hover path,
+  &:hover circle {
+  fill: @green;
+}
+
+  &:active path,
+  &:active circle {
+    fill-opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .social-icons {
     margin-top: 10px;

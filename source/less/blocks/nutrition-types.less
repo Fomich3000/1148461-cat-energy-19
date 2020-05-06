@@ -88,6 +88,15 @@
   position: relative;
   .heading-small();
 
+  &:hover::after {
+    width: 34px;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -106,7 +115,7 @@
     width: 25px;
     height: 12px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
-  }
+}
 
   &--slim::after {
     top: 6px;

@@ -1,5 +1,10 @@
 .location {
   width: 100%;
+
+  &--catalog {
+  background-color: #f2f2f2;
+  padding-top: 30px;
+  }
 }
 
 .location__wrapper {
@@ -31,9 +36,19 @@
   width: 100%;
   padding: 0;
   border: none;
+
+  &--catalog {
+    height: 363px;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .location {
+    &--catalog {
+      padding-top: 0;
+    }
+
+  }
   .location__wrapper {
     width: 708px;
     min-height: 201px;
@@ -75,6 +90,13 @@
     display: flex;
     width: 570px;
     height: 201px;
+    padding: 63px 76px 0;
+    padding-right: 85px;
+    padding-top: 61px;
     background-color: @white;
+  }
+
+  .location__address {
+    text-align: left;
   }
 }
