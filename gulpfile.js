@@ -46,12 +46,12 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 gulp.task("sprite", function() {
-  return gulp.src("source/img/**/*.svg")
+  return gulp.src("source/img/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 gulp.task("html", function () {
   return gulp.src("source/*.html")
