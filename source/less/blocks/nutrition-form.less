@@ -133,25 +133,27 @@
     border: 1px solid @border-grey;
   }
 
+  &--input:active + .nutrition-form__input-icon--email-icon path,
+  &--input:active + .nutrition-form__input-icon--phone-icon path {
+    fill: @green;
+  }
+
+  &--input:invalid + .nutrition-form__input-icon--email-icon path,
+  &--input:invalid + .nutrition-form__input-icon--phone-icon path {
+    fill: @icon-invalid;
+  }
+}
+
+.nutrition-form__input-icon {
   &--email-icon,
   &--phone-icon {
     position: absolute;
     top: 16px;
     left: 247px;
-  }
+}
 
   &--phone-icon {
     top: 13px;
-  }
-
-  &--input:active + &--email-icon path,
-  &--input:active + &--phone-icon path {
-    fill: @green;
-  }
-
-  &--input:invalid + &--email-icon path,
-  &--input:invalid + &--phone-icon path {
-    fill: @icon-invalid;
   }
 }
 
@@ -419,7 +421,9 @@
     &--phone:active {
       padding-left: 18px;
     }
+  }
 
+  .nutrition-form__input-icon {
     &--email-icon,
     &--phone-icon {
       position: absolute;
@@ -656,11 +660,14 @@
     &--phone:active {
       padding-left: 17px;
     }
+  }
 
-    &--email-icon,
-    &--phone-icon {
-      position: absolute;
-      left: 532px;
+    .nutrition-form__input-icon {
+
+      &--email-icon,
+      &--phone-icon {
+        position: absolute;
+        left: 532px;
     }
   }
 
