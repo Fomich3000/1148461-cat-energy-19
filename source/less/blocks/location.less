@@ -1,5 +1,5 @@
 .location {
-  width: 100%;
+  position: relative;
 
   &--catalog {
     background-color: #f2f2f2;
@@ -7,8 +7,46 @@
   }
 }
 
-.location__wrapper {
-  padding-bottom: 24px;
+.location__location-wrapper {
+  position: relative;
+  .container-mobile();
+}
+
+.location__address-container {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  height: 39px;
+  background-color: @white;
+
+  &--catalog {
+    width: 100%;
+    top: -74px;
+    height: 114px;
+    background-color: @grey;
+  }
+}
+
+.location__address-wrapper {
+  z-index: 1;
+  width: 280px;
+  position: absolute;
+  top: -47px;
+  padding-bottom: 29px;
+
+  &--catalog,
+  &--form {
+    left: 0;
+    width: 320px;
+    top: 0;
+    height: 114px;
+    padding: 28px 20px 0;
+    background-color: @grey;
+  }
+
+  &--form {
+    height: 115px;
+  }
 }
 
 .location__partership-invitation {
@@ -31,14 +69,51 @@
   display: none;
 }
 
-.location__map {
-  display: block;
+.location__map-wrapper {
   width: 100%;
-  padding: 0;
+  position: relative;
+  height: 400px;
+}
+
+.location__map-container {
+  display: none;
+  position: relative;
+
+  &--no-js {
+    display: block;
+  }
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    left: 129px;
+    top: 178px;
+    content: "";
+    width: 55px;
+    height: 53px;
+    background: url("../img/map-pin.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.location__map-static {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #000000;
+  display: block;
+}
+
+.location__map-interactive {
+  width: 100%;
   border: none;
 
-  &--catalog {
-    height: 363px;
+  &--no-js {
+    display: none;
   }
 }
 
@@ -49,12 +124,63 @@
     }
   }
 
-  .location__wrapper {
+  .location__map-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 768px;
+    height: 400px;
+    display: block;
+  }
+
+  .location__address-container {
+    position: absolute;
+    z-index: 1;
+    top: -198px;
+    padding-bottom: 0;
+    background-color: transparent;
+
+    &--catalog {
+      left: 0;
+      width: 100%;
+      top: -198px;
+      height: 200px;
+      padding: 0;
+      background-color: @grey;
+    }
+  }
+
+  .location__location-wrapper {
+    position: relative;
+    .container-tablet();
+  }
+
+  .location__address-wrapper {
     width: 708px;
-    min-height: 201px;
     padding: 65px 41px 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
+
+    &--catalog,
+    &--form {
+      width: 768px;
+      padding: 64px 70px 0;
+    }
+
+    &--form {
+      padding: 66px 72px 0;
+      height: 199px;
+    }
+  }
+
+  .location__map-container {
+    &::after {
+      width: 114px;
+      height: 106px;
+      left: 321px;
+      top: 149px;
+    }
   }
 
   .location__partership-invitation {
@@ -80,21 +206,48 @@
 }
 
 @media (min-width: @desktop-width) {
-  .location__container {
-    position: relative;
-  }
-
-  .location__wrapper {
-    position: absolute;
-    top: 100px;
+  .location__address-wrapper {
+    top: 299px;
     display: flex;
     width: 570px;
     height: 201px;
     padding: 61px 85px 0 76px;
     background-color: @white;
+
+    &--catalog,
+    &--form {
+      width: 570px;
+      height: 196px;
+      left: 41px;
+      background-color: @white;
+    }
+  }
+
+  .location__location-wrapper {
+    position: relative;
+    .container-desktop();
+  }
+
+  .location__address-container {
+    &--catalog {
+      background-color: transparent;
+    }
+  }
+
+  .location__map-container {
+    &::after {
+      left: 904px;
+      top: 151px;
+    }
   }
 
   .location__address {
     text-align: left;
+  }
+
+  .location__map-static {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
   }
 }

@@ -8,6 +8,12 @@
   height: 305px;
   background: url("../img/index-background-mobile@1x.jpg") no-repeat center;
   background-color: @background-green;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/index-background-mobile@2x.jpg") no-repeat center;
+    background-size: contain;
+    background-color: @background-green;
+  }
 }
 
 .intro__page-title {
@@ -100,6 +106,11 @@
     background: url("../img/index-background-desktop@1x.jpg") no-repeat left calc(50% + 360px) top 0, linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(99, 167, 58, 1) 50%);
     background-color: rgb(255, 255, 255);
     min-height: 696px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat left calc(50% + 360px) top 0, linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(99, 167, 58, 1) 50%);
+      background-size: contain;
+    }
   }
 
   .intro__page-title {

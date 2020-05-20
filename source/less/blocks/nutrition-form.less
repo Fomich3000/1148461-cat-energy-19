@@ -61,6 +61,15 @@
   }
 }
 
+.nutrition-form__input-wrapper {
+  display: flex;
+  position: relative;
+  width: 280px;
+  min-height: 45px;
+  .labels-bold();
+  font-size: 16px;
+}
+
 .nutrition-form__label {
   display: flex;
   position: relative;
@@ -70,6 +79,14 @@
   min-height: 45px;
   .labels-bold();
   font-size: 16px;
+
+  &--email,
+  &--phone {
+    display: block;
+    align-items: normal;
+    width: auto;
+    padding: 13px 0;
+  }
 }
 
 .nutrition-form__control {
@@ -113,12 +130,18 @@
     padding-left: 14px;
     padding-top: 12px;
     min-height: 150px;
+    border: 1px solid @border-grey;
   }
 
   &--email-icon,
   &--phone-icon {
     position: absolute;
+    top: 16px;
     left: 247px;
+  }
+
+  &--phone-icon {
+    top: 13px;
   }
 
   &--input:active + &--email-icon path,
@@ -159,6 +182,7 @@
     height: 30px;
     border: @radio-checkbox-border;
     border-radius: 20px;
+    cursor: pointer;
   }
 
   &:hover::before {
@@ -174,6 +198,7 @@
     height: 12px;
     border-radius: 20px;
     background-color: transparent;
+    cursor: pointer;
   }
 }
 
@@ -181,10 +206,26 @@
   background-color: @green;
 }
 
+.nutrition-form__control--radio:focus + .nutrition-form__label--radio::before {
+  outline: thin dotted 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.nutrition-form__control--radio:disabled + .nutrition-form__label--radio,
+.nutrition-form__control--radio:disabled + .nutrition-form__label--radio::before {
+  background-image: none;
+  opacity: 0.3;
+  cursor: default;
+}
+
 .nutrition-form__owner-contacts {
   position: relative;
   min-height: 190px;
   margin-bottom: 24px;
+}
+
+.nutrition-form__owner-contacts-wrapper {
+  margin-bottom: 28px;
 }
 
 .nutrition-form__comments {
@@ -196,7 +237,7 @@
 .nutrition-form__extra-options {
   position: relative;
   min-height: 220px;
-  margin-bottom: 29px;
+  margin-bottom: 107px;
 }
 
 .nutrition-form__extra-options-wrapper {
@@ -210,6 +251,7 @@
   min-height: 30px;
   margin-bottom: 12px;
   padding-left: 46px;
+  cursor: pointer;
 
   &:active {
     opacity: 0.3;
@@ -232,6 +274,18 @@
 
 .nutrition-form__control--checkbox:checked + .nutrition-form__label--checkbox::before {
   background: url("../img/icon-tick.svg") no-repeat center;
+}
+
+.nutrition-form__control--checkbox:focus + .nutrition-form__label--checkbox::before {
+  outline: thin dotted 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.nutrition-form__control--checkbox:disabled + .nutrition-form__label--checkbox,
+.nutrition-form__control--checkbox:disabled + .nutrition-form__label--checkbox::before {
+  background-image: none;
+  opacity: 0.3;
+  cursor: default;
 }
 
 .nutrition-form__control--button {
@@ -314,11 +368,22 @@
     }
   }
 
+  .nutrition-form__input-wrapper {
+    width: 632px;
+    min-height: 42px;
+  }
+
   .nutrition-form__label {
     width: 632px;
     min-height: 42px;
     font-size: 20px;
     margin-bottom: 20px;
+
+    &--email,
+    &--phone {
+      width: auto;
+      padding: 17px 0;
+    }
   }
 
   .nutrition-form__control {
@@ -359,6 +424,11 @@
     &--phone-icon {
       position: absolute;
       left: 595px;
+      top: 19px;
+    }
+
+    &--phone-icon {
+      top: 17px;
     }
   }
 
@@ -396,6 +466,7 @@
 
   .nutrition-form__owner-contacts-wrapper {
     padding: 0 70px;
+    margin-bottom: 67px;
   }
 
   .nutrition-form__owner-contacts {
@@ -418,7 +489,7 @@
 
   .nutrition-form__extra-options {
     min-height: 205px;
-    margin-bottom: 51px;
+    margin-bottom: 249px;
   }
 
   .nutrition-form__extra-options-wrapper {
@@ -433,7 +504,7 @@
     width: 210px;
     padding-left: 58px;
     margin-bottom: 29px;
-    margin-right: 80px;
+    margin-right: 134px;
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -553,11 +624,20 @@
     margin-bottom: -9px;
   }
 
-  .nutrition-form__label {
+  .nutrition-form__input-wrapper {
     width: 571px;
 
     &--email {
       margin-right: 78px;
+    }
+  }
+
+  .nutrition-form__label {
+    width: 571px;
+
+    &--email,
+    &--phone {
+      width: auto;
     }
   }
 
@@ -596,11 +676,13 @@
     display: flex;
     flex-wrap: wrap;
     .container-desktop();
+    margin-bottom: 70px;
   }
 
   .nutrition-form__control--textarea {
     width: 100%;
     min-height: 175px;
+    overflow: auto;
   }
 
   .nutrition-form__comments {
