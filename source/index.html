@@ -21,7 +21,7 @@
       </a>
       <nav class="main-nav main-nav--opened">
         <div class="main-nav__button-wrapper container">
-          <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню навигации"></button>
+          <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Кнопка открытия меню навигации"></button>
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -52,7 +52,7 @@
           <picture>
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-            <img class="intro__can-picture" srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Стилизованная картинка с банком корма Кэт Энерджи">
+            <img class="intro__can-picture" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Стилизованная картинка с банком корма Кэт Энерджи">
           </picture>
           <a class="intro__nutrition-selection button" href="catalog.html">Подобрать программу</a>
         </div>
@@ -98,7 +98,7 @@
         </li>
         <li class="nutrition-features__item nutrition-features__item--time-icon">
           <p class="nutrition-features__description nutrition-features__description--time">
-            Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!
+            Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего&nbspпитомца!
           </p>
         </li>
       </ul>
@@ -123,7 +123,7 @@
                   <p class="example__results-property example__results-property--time">Затрачено времени</p>
                 </li>
               </ul>
-              <p class="example__nutrition-costs">Затраты на питание: <span class="example__nutrition-costs--tab"></span>15 000 руб.</p>
+              <p class="example__nutrition-costs">Затраты на питание: <span class="example__nutrition-costs-tab"></span>15 000 руб.</p>
             </div>
           </div>
           <div class="example__cat-slider slider">
@@ -131,11 +131,11 @@
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="slider__cat-picture slider__cat-picture--before" srcset="img/before-mobile@1x.png 1x, img/before-mobile@2x.png 2x" width="280" height="240" alt="Фото толстого кота">
+                <img class="slider__cat-picture slider__cat-picture--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="280" height="240" alt="Фото толстого кота">
               </picture>
               <div class="slider__controls">
                 <button class="slider__button slider__button--before-button">Было</button>
-                <div class="slider__toggle slider__toggle--before-position"></div>
+                <div class="slider__toggle"></div>
                 <button class="slider__button slider__button--after-button">Cтало</button>
               </div>
             </div>
@@ -144,22 +144,35 @@
       </div>
     </section>
     <section class="location">
-      <div class="location__container container">
-        <div class="location__wrapper">
-          <h2 class="visually-hidden">Как нас найти</h2>
-          <p class="location__partership-invitation">Приглашаем<br> к сотрудничеству дилеров!</p>
-          <p class="location__address">ул. Большая Конюшенная, д. 19/8<br class="location__adress--break"><br "location__adress--break">Санкт-Петербург</p>
+      <div class="location__address-container">
+        <div class="location__location-wrapper">
+          <div class="location__address-wrapper">
+            <h2 class="visually-hidden">Как нас найти</h2>
+            <p class="location__partership-invitation">Приглашаем<br> к сотрудничеству дилеров!</p>
+            <p class="location__address">ул. Большая Конюшенная, д. 19/8<br class="location__adress--break"><br "location__adress--break">Санкт-Петербург</p>
+          </div>
         </div>
       </div>
-      <iframe class="location__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585318877508!5m2!1sru!2sru"
-        width="320" height="362" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="location__map-wrapper">
+        <iframe class="location__map-interactive location__map-interactive--no-js"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585318877508!5m2!1sru!2sru"
+          width="320" height="400" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="location__map-container container location__map-container--no-js">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png png">
+            <img class="location__map-static" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта города с адресом магазина">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
-      <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип с надписью Кэт Энерджи">
+      <a class=page-footer__logo-link href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип с надписью Кэт Энерджи">
+      </a>
       <ul class="page-footer__social-icons social-icons">
         <li class="social-icons__item social-icons__item--vk" aria-label="Вконтакте">
           <a class="social-icons__link social-icons__link--vk" href="https://www.vk.com/">
@@ -218,5 +231,7 @@
     </div>
   </footer>
 </body>
+
+<script src="js/mapswitch.js"></script>
 
 </html>

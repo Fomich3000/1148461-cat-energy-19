@@ -1,5 +1,6 @@
 .table-text {
   border-spacing: 0;
+  line-height: 17px;
 }
 
 .table-text td,
@@ -17,5 +18,12 @@
   .table-text tr {
     border-bottom: @grey-block-underline;
     padding: 7px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table-text td {
+    padding-right: 2px;
+    padding-top: 8px;
   }
 }
