@@ -40,7 +40,7 @@
     width: 320px;
     top: 0;
     height: 114px;
-    padding: 28px 20px 0;
+    padding: 26px 20px 0;
     background-color: @grey;
   }
 
@@ -59,7 +59,7 @@
 
 .location__address {
   display: inline-block;
-  width: 135px;
+  width: 138px;
   margin: 0;
   font-family: "Arial", sans-serif;
   line-height: 20px;
@@ -208,20 +208,28 @@
 @media (min-width: @desktop-width) {
   .location__address-wrapper {
     top: 296px;
-    left: 110px;
+    right: 79px;
     display: flex;
     width: 570px;
     height: 201px;
     padding: 64px 85px 0 76px;
     background-color: @white;
+
+    &--catalog,
+    &--form {
+      left: auto;
+    }
   }
 
   .location__location-wrapper {
-    position: relative;
-    .container-desktop();
+    position: static;
+    width: 1300px;
   }
 
   .location__address-container {
+    position: relative;
+    .container-desktop();
+    height: 0;
     width: 0;
 
     &--catalog {
