@@ -127,11 +127,20 @@
           </div>
           <div class="example__cat-slider slider">
             <div class="example__slider-wrapper container">
-              <picture>
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="slider__cat-picture slider__cat-picture--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="280" height="240" alt="Фото толстого кота">
-              </picture>
+              <div class="slider__cat-picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider__cat-picture slider__cat-picture--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="280" height="240" alt="Фото толстого кота">
+                </picture>
+              <div class="after-picture">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider__cat-picture slider__cat-picture--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Фото худого кота">
+                </picture>
+              </div>
+              </div>
               <div class="slider__controls">
                 <button class="slider__button slider__button--before-button">Было</button>
                 <button class="slider__toggle" type="button" aria-label="Ползунок слайдера до/после"></button>
@@ -231,6 +240,10 @@
   </footer>
   <script src="js/picturefill.js"></script>
   <script src="js/menu-map-switch.js"></script>
+  <script src="js/objectfit.js"></script>
+  <script>
+    objectFitImages();
+  </script>
 </body>
 
 </html>
