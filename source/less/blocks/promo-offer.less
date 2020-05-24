@@ -1,7 +1,7 @@
 .promo-offer {
   position: relative;
   width: 280px;
-  height: 289px;
+  min-height: 289px;
   margin-bottom: 109px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
   background-color: @green;
@@ -15,7 +15,7 @@
   &::before {
     position: absolute;
     left: 113px;
-    bottom: 163px;
+    top: 64px;
     display: block;
     content: "";
     width: 56px;
@@ -26,7 +26,8 @@
 
 .promo-offer__text {
   margin: 0;
-  padding: 188px 28px 0;
+  padding: 186px 28px 0;
+  padding-bottom: 41px;
   text-align: center;
   .regular-white();
 }
@@ -34,7 +35,7 @@
 @media (min-width: @tablet-width) {
   .promo-offer {
     width: 708px;
-    height: 200px;
+    min-height: 200px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
     margin-bottom: 75px;
 
@@ -47,7 +48,7 @@
 
     &::before {
       left: 90px;
-      bottom: 74px;
+      top: 32%;
     }
   }
 
@@ -76,7 +77,7 @@
 
     &::before {
       left: 95px;
-      bottom: 163px;
+      top: 67px;
     }
   }
 
