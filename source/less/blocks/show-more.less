@@ -30,7 +30,7 @@
 }
 
 .show-more__button {
-  padding-top: 10px;
+  padding: 10px 35px;
   font-size: 16px;
 }
 
@@ -40,6 +40,7 @@
     padding-top: 146px;
     height: 431px;
     border: @grey-block-underline;
+    margin-bottom: 0;
   }
 
   .show-more__heading-text {
@@ -69,14 +70,14 @@
     margin-left: 7px;
     font-size: 16px;
     width: 249px;
-    height: 40px;
+    min-height: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .show-more {
     width: 245px;
-    padding: 146px 10px 0 30px;
+    padding: 143px 10px 0 30px;
   }
 
   .show-more__heading-text {
@@ -96,6 +97,6 @@
 
   .show-more__button {
     width: 169px;
-    height: 40px;
+    min-height: 40px;
   }
 }

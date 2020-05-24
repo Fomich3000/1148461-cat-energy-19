@@ -17,7 +17,7 @@
   height: 63px;
   padding-top: 30px;
   padding-bottom: 10px;
-  margin-bottom: 42px;
+  margin-bottom: 23px;
   cursor: pointer;
 
   &:hover {
@@ -31,31 +31,20 @@
 
 .page-footer__social-icons {
   position: relative;
-
-  &::after,
-  &::before {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 280px;
-    height: 1px;
-    background-color: #d9d9d9;
-  }
-
-  &::before {
-    top: -21px;
-    left: 0;
-  }
-
-  &::after {
-    top: 42px;
-    left: 0;
-  }
+  margin-bottom: 17px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border-top: 1px solid @grey-separator;
+  border-bottom: 1px solid @grey-separator;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     min-height: auto;
+
+    &--form {
+      padding-top: 12px;
+    }
   }
 
   .page-footer__wrapper {
@@ -79,6 +68,7 @@
 
   .page-footer__social-icons {
     position: relative;
+    padding-top: 9px;
 
     &::after,
     &::before {

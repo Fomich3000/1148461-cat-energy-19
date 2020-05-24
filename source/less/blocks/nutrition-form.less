@@ -95,6 +95,7 @@
     flex-grow: 1;
     margin-left: 14px;
     padding-left: 13px;
+    padding-right: 10px;
     height: 45px;
     border: @input-border;
   }
@@ -128,6 +129,7 @@
   &--phone {
     margin-left: 10px;
     padding-left: 15px;
+    padding-right: 39px;
 
     &:focus {
       padding-left: 14px;
@@ -145,8 +147,8 @@
   &--textarea {
     .inputs-bold();
     width: 280px;
-    padding-left: 14px;
-    padding-top: 12px;
+    padding: 12px 14px;
+    padding-right: 13px;
     min-height: 150px;
     border: 1px solid @border-grey;
 
@@ -419,6 +421,11 @@
       padding-left: 18px;
     }
 
+    &--email,
+    &--phone {
+      padding-right: 50px;
+    }
+
     &--input:focus {
       padding-left: 17px;
     }
@@ -578,9 +585,9 @@
 
   .nutrition-form__caption {
     display: block;
-    margin-left: 60px;
+    margin-left: 58px;
     width: 185px;
-    height: 40px;
+    height: 39px;
     font-size: 16px;
     line-height: 16px;
   }

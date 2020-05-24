@@ -2,7 +2,11 @@
   display: block;
   width: 320px;
   height: 240px;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
+
+  &--after {
+    display: none;
+  }
 }
 
 .slider__controls {
@@ -48,10 +52,31 @@
     background-color: rgb(255, 255, 255);
   }
 
+  .slider__cat-picture-wrapper {
+    display: flex;
+  }
+
   .slider__cat-picture {
-    width: 691px;
+    position: relative;
     height: 512px;
     margin: 0 auto 0 16px;
+    object-fit: cover;
+
+    &--before {
+      width: 338px;
+      z-index: 1;
+      display: block;
+      object-position: 3px -1px;
+      font-family: "object-fit: cover; object-position: 3px -1px;", sans-serif;
+    }
+
+    &--after {
+      z-index: 2;
+      display: block;
+      margin-left: 0;
+      object-position: -334px -2px;
+      font-family: "object-fit: cover; object-position: -334px -2px;", sans-serif;
+    }
   }
 
   .slider__controls {
@@ -146,13 +171,37 @@
   .slider {
     background: linear-gradient(180deg, #ffffff 28.5%, #f2f2f2 28.5%);
     background-color: rgb(255, 255, 255);
+
+    &::after {
+      top: 185px;
+    }
+  }
+
+  .slider__cat-picture-wrapper {
+    position: relative;
+    z-index: 12;
+    height: 650px;
+    background: linear-gradient(180deg, #ffffff 28.5%, rgba(0, 0, 0, 0) 28.5%), linear-gradient(90deg, #f2f2f2 56.4%, #eaeaea 50%);
+    background-color: rgb(255, 255, 255);
   }
 
   .slider__cat-picture {
-    width: 694px;
     height: 564px;
     padding-bottom: 50px;
-    margin-left: 53px;
+
+    &--before {
+      width: 365px;
+      z-index: 10;
+      display: block;
+      margin-left: 53px;
+      object-position: 3px -1px;
+      font-family: "object-fit: cover; object-position: 3px -1px;", sans-serif;
+    }
+
+    &--after {
+      object-position: -362px -2px;
+      font-family: "object-fit: cover; object-position: -362px -2px;", sans-serif;
+    }
   }
 
   .slider__toggle {
@@ -166,8 +215,11 @@
   }
 
   .slider__controls {
+    z-index: 13;
+    position: absolute;
+    top: 564px;
     width: 739px;
-    padding: 0 36px 65px 134px;
+    padding: 0 36px 0 134px;
     margin-top: -9px;
 
     &::after {
