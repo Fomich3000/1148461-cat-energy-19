@@ -114,6 +114,10 @@
     border: @input-border-invalid;
   }
 
+  &--input:required:invalid {
+    box-shadow: none;
+  }
+
   &--age-input,
   &--weight-input {
     margin-left: 15px;
@@ -160,13 +164,13 @@
     }
   }
 
-  &--input:focus + .nutrition-form__input-icon--email-icon path,
-  &--input:focus + .nutrition-form__input-icon--phone-icon path {
+  &--input:focus + .nutrition-form__input-icon--email-icon,
+  &--input:focus + .nutrition-form__input-icon--phone-icon {
     fill: @green;
   }
 
-  &--input:focus:invalid + .nutrition-form__input-icon--email-icon path,
-  &--input:focus:invalid + .nutrition-form__input-icon--phone-icon path {
+  &--input:focus:invalid + .nutrition-form__input-icon--email-icon,
+  &--input:focus:invalid + .nutrition-form__input-icon--phone-icon {
     fill: @icon-invalid;
   }
 }
@@ -176,7 +180,7 @@
   &--phone-icon {
     position: absolute;
     top: 16px;
-    left: 247px;
+    left: 246px;
   }
 
   &--phone-icon {
@@ -469,7 +473,7 @@
     &--email-icon,
     &--phone-icon {
       position: absolute;
-      left: 595px;
+      left: 594px;
       top: 19px;
     }
 
