@@ -9,6 +9,7 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var minify = require("gulp-minify");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -75,6 +76,11 @@ gulp.task("webp", function () {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
+gulp.task("minjs", function() {
+  return gulp.src("source/js/*.js")
+    .pipe(minify())
+    .pipe(gulp.dest("build/js"))
+});
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -85,6 +91,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/js/*.js", gulp.series("minjs", "refresh"));
   gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"))
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -97,6 +104,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "minjs",
   "sprite",
   "html"
 ));

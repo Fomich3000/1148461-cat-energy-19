@@ -36,6 +36,18 @@
 }
 
 .social-icons__link {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   &--vk {
     padding: 3px 4px;
   }
@@ -49,16 +61,16 @@
   }
 }
 
+.social-icons__link:hover > .social-icons__icon {
+  fill: @green;
+}
+
+.social-icons__link:active > .social-icons__icon {
+  fill-opacity: 0.3;
+}
+
 .social-icons__icon {
   fill: #666666;
-
-  &:hover {
-    fill: @green;
-  }
-
-  &:active {
-    fill-opacity: 0.3;
-  }
 }
 
 @media (min-width: @tablet-width) {
