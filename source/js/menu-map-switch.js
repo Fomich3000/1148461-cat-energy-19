@@ -10,12 +10,7 @@ mapInteractive.classList.remove('location__map-interactive--no-js');
 mapContainer.classList.remove('location__map-container--no-js');
 
 
-toggle.addEventListener('click', function() {
-  if (menu.classList.contains('main-nav--closed')) {
-    menu.classList.remove('main-nav--closed');
-    menu.classList.add('main-nav--opened');
-  } else {
-    menu.classList.add('main-nav--closed');
-    menu.classList.remove('main-nav--opened');
-  }
+toggle.addEventListener('click', function () {
+  menu.classList.toggle('main-nav--closed');
+  menu.classList.toggle('main-nav--opened');
 });
